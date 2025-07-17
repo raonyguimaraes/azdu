@@ -1,6 +1,7 @@
 echo "Installing Azdu"
 #curl -sf -L https://github.com/raonyguimaraes/azdu/releases/download/0.1/azdu > /usr/local/bin/azdu
-echo "#!/usr/bin/env python3
+cat << EOF > /usr/local/bin/azdu
+#!/usr/bin/env python3
 
 import argparse
 import os
@@ -27,6 +28,7 @@ def bytes_to_human_readable(num, suffix='B'):
     return f"{num:.1f}Yi{suffix}"
 
 if __name__ == '__main__':
-    print(bytes_to_human_readable(azdu(args.path)))" > /usr/local/bin/azdu
+    print(bytes_to_human_readable(azdu(args.path)))
+EOF
 
 chmod +x /usr/local/bin/azdu
