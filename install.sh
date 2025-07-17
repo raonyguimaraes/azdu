@@ -1,5 +1,7 @@
 echo "Installing Azdu"
 #curl -sf -L https://github.com/raonyguimaraes/azdu/releases/download/0.1/azdu > /usr/local/bin/azdu
+#https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash 
+#https://superuser.com/questions/553932/how-to-check-if-i-have-sudo-access
 
 prompt=$(sudo -nv 2>&1)
 if [ $? -eq 0 ]; then
